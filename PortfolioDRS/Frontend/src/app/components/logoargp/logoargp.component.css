@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logoargp{
+    width: 150px;
+}
+
+img{
+    width: 50px;
+}
+
+.redes{
+    margin-right: 0.5em;
+}
+
+.btn{
+    border-width: medium;
+}
+
+.redes img{
+    margin: 00.1em;
+
+}
+
