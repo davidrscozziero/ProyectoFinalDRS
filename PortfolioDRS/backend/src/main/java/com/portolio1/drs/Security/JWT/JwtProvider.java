@@ -30,7 +30,7 @@ public class JwtProvider {
             return Jwts.builder().setSubject(usuarioPrincipal.getUsername())
                     .setIssuedAt(new Date())
                     .setExpiration(new Date(new Date().getTime()+expiration*1000))
-                    .signWith(SignatureAlgorithm.ES512, secret)
+                    .signWith(SignatureAlgorithm.HS512, secret)
                     .compact();
         }
         
@@ -51,7 +51,7 @@ public class JwtProvider {
                 } catch (IllegalArgumentException e){
                 logger.error("Token vacio");
                 } catch (SignatureException e){
-                logger.error("Firma no  válida");
+                logger.error("Firma no válida");
             }
             return false;
         }

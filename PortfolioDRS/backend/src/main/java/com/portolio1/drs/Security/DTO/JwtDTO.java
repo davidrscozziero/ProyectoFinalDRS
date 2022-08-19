@@ -41,7 +41,7 @@ public class JwtDTO {
         this.nombreUsuario = nombreUsuario;
     }
 
-    public Collection<? extends GrantedAuthority> getAuthorities() {
+    public Collection<?extends GrantedAuthority> getAuthorities(){
         return authorities;
     }
 
