@@ -1,29 +1,30 @@
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
 <div class="row">
     <h1>Experiencia Laboral</h1>
-    <div class="col-lg-11">
-<ul>
-    <li>
-        <h2>Movistar Argentina</h2>-<h3>(years)</h3>
-    </li>
-    <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, accusamus odit quod maxime voluptas ipsam mollitia ipsum, labore assumenda nemo quos rerum beatae, et iste quasi necessitatibus cum quo aperiam! 
-    </p>
-</ul>
-<ul>
-    <li>
-        <h2>ROSARIOMIX.COM</h2>-<h3>(years)</h3>
-    </li>
-    <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, accusamus odit quod maxime voluptas ipsam mollitia ipsum, labore assumenda nemo quos rerum beatae, et iste quasi necessitatibus cum quo aperiam! 
-    </p>
-</ul>
-<ul>
-    <li>
-        <h2>Municipalidad de Rosario</h2>-<h3>(years)</h3>
-    </li>
-    <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, accusamus odit quod maxime voluptas ipsam mollitia ipsum, labore assumenda nemo quos rerum beatae, et iste quasi necessitatibus cum quo aperiam! 
-    </p>
-</ul>
+    <div class="col-log-2">
+        <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">
+            Nueva experiencia
+        </button>
     </div>
+    <tr>
+        <p></p>
+    </tr>
+<table class="table">
+    <tbody>
+<tr *ngFor="let Experiencia of expe">
+    <td><h3>{{Experiencia.nombreE}}</h3></td>
+    <td>{{Experiencia.descripcionE}}</td>
+    <td *ngIf="isLogged"><button class="btn btn-dark" routerLink="/editexp/{{Experiencia.id}}">
+        <i class="bi bi-pencil-square"></i>Editar
+    </button></td>
+    <td>Borrar</td>
+</tr>
+
+    </tbody>
+
+</table>
+
+    
 </div>
