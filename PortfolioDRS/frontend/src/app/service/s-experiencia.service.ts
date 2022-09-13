@@ -22,7 +22,7 @@ export class SExperienciaService {
     return this.httpClient.post<any>(this.expURL  + 'create', experiencia);
   }
   public update(id: number, experiencia: Experiencia): Observable<any> {
-    return this.httpClient.put<any>(this.expURL + `update/${id}`,experiencia);
+    return this.httpClient.put<any>(this.expURL + `update/${id}`, experiencia);
   }
   public delete(id: number): Observable<any> {
     return this.httpClient.delete<any>(this.expURL + `delete/${id}`);  
