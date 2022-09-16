@@ -10,7 +10,7 @@ import { LogoargpComponent } from './components/logoargp/logoargp.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
-import { SkillsComponent } from './components/skills/skills.component';
+import { HysComponent } from './components/hys/hys.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -20,6 +20,8 @@ import { NewExperienciaComponent } from './components/experiencia/new-experienci
 import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
 import { NeweducacionComponent } from './components/educacion/neweducacion/neweducacion.component';
 import { EditeducacionComponent } from './components/educacion/editeducacion/editeducacion.component';
+import { EditSkillComponent } from './components/hys/edit-skill.component';
+import { NewSkillComponent } from './components/hys/new-skill.component';
  
 @NgModule({
   declarations: [
@@ -30,7 +32,7 @@ import { EditeducacionComponent } from './components/educacion/editeducacion/edi
     LogoargpComponent,
     ExperienciaComponent,
     EducacionComponent,
-    SkillsComponent,
+    HysComponent,
     ProyectosComponent,
     FooterComponent,
     HomeComponent,
@@ -38,7 +40,9 @@ import { EditeducacionComponent } from './components/educacion/editeducacion/edi
     NewExperienciaComponent,
     EditExperienciaComponent,
     NeweducacionComponent,
-    EditeducacionComponent
+    EditeducacionComponent,
+    EditSkillComponent,
+    NewSkillComponent
 
   ],
   imports: [
@@ -46,7 +50,8 @@ import { EditeducacionComponent } from './components/educacion/editeducacion/edi
     AppRoutingModule,
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
