@@ -28,8 +28,8 @@
 
         <div>
             <td *ngIf="isLogged">
-                <button class="btn btn-light" routerLink="/editskill/{{skill.id}}">
-                    <i class="bi bi-vector-pen"></i></button>
+                <button class="btn btn-dark" routerLink="/editskill/{{skill.id}}">
+                    <i class="bi bi-pencil-square"></i></button>
             </td>
             <td *ngIf="isLogged">
                 <button class="btn btn-warning" (click)="delete(skill.id)">
