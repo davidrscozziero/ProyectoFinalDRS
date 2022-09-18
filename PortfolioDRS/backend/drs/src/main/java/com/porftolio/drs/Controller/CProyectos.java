@@ -66,7 +66,7 @@ public class CProyectos {
         }
         Proyectos proyectos = new Proyectos(dtoproyectos.getNombreE(), dtoproyectos.getDescripcionE());
         sProyectos.save(proyectos);
-       return new ResponseEntity(new Mensaje("Proyecto indexada"),HttpStatus.OK);
+       return new ResponseEntity(new Mensaje("Proyecto indexado"),HttpStatus.OK);
     }
     
     @PutMapping("/update/{id}")
