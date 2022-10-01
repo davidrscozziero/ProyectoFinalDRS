@@ -12,8 +12,7 @@ import { ProyectosService } from 'src/app/service/proyectos.service';
 export class EditproyectosComponent implements OnInit {
   proyectos: Proyectos = null;
   
-  constructor(
-    private proyectosS: ProyectosService,
+  constructor(private proyectosS: ProyectosService,
     private activatedRouter : ActivatedRoute,
     private router: Router
   ) { }
@@ -36,10 +35,11 @@ export class EditproyectosComponent implements OnInit {
       data => {
         this.router.navigate(['']);
       }, err => {
-        alert("Error al modificar la educacion");
+        alert("Error al modificar proyecto");
         this.router.navigate(['']);
       }
     )
+
   }
 }
 

@@ -8,3 +8,11 @@ footer{
     flex-direction: column;
     text-align: center;
 }
+
+#qr{
+    width: 100px;
+}
+
+img{
+    width: 50px;
+}
