@@ -8,7 +8,7 @@ import { Proyectos } from '../model/proyectos';
   providedIn: 'root'
 })
 export class ProyectosService {
-  URL = 'https://appdrsargentinaprograma.herokuapp.com/proyectos/';
+  URL = 'http://localhost:8080/proyectos/';
 
   constructor(private httpClient : HttpClient) { }
 
@@ -21,11 +21,11 @@ export class ProyectosService {
   }
 
   public save(proyectos: Proyectos): Observable<any>{
-    return this.httpClient.post<any>(this.URL + 'create', Proyectos);
+    return this.httpClient.post<any>(this.URL + 'create', proyectos);
   }
 
   public update(id: number, proyectos: Proyectos): Observable<any>{
-    return this.httpClient.put<any>(this.URL + `update/${id}`, Proyectos);
+    return this.httpClient.put<any>(this.URL + `update/${id}`, proyectos);
   }
 
   public delete(id: number): Observable<any>{
